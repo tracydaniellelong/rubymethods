@@ -15,15 +15,18 @@
 # end
 
  def my_reject!(my_hash, operator, changed_key)
- 	another_hash = {}
+ 	
  	# case oper
  	# when oper == less
  		
 
- 	# my_hash.each do |key, value|
- 	# 	if my_hash.has_key?(block)
-
- 	# 	end
- 	# end
+ 	my_hash.each do |key, value|
+ 		if operator == ">"
+ 			if key > changed_key
+ 				my_hash.delete(key)
+ 			end
+ 		end
+ 	end
+return my_hash
 
  end
