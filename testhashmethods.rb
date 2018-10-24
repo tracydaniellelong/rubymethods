@@ -41,7 +41,7 @@ class Testing < Minitest::Test
 		}
 		operator = "<"
 		changed_key = 2
-		assert_equal({1 => "a"}, my_reject!(my_hash, operator, changed_key))
+		assert_equal({2 => "b", 3 => "c"}, my_reject!(my_hash, operator, changed_key))
 	end
-#my_hash.reject!{|key, value| key > 1}
+#my_hash.reject!{|key, value| key < 2}
 end

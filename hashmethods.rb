@@ -20,6 +20,10 @@ def my_reject!(my_hash, operator, changed_key)
  			if key > changed_key
  				my_hash.delete(key)
  			end
+ 		elsif operator == "<"
+ 			if key < changed_key
+ 				my_hash.delete(key)
+ 			end
  		end
  	end
 return my_hash
