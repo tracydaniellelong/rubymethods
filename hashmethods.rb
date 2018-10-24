@@ -1,20 +1,17 @@
 
-def my_include?(num)
-	my_hash = {
-	1 => "a",
-	2 => "b"
-}
+def my_include?(my_hash, num)
+counter = 0
 
-number = ""
-	my_hash.each do |key|
-		case key
-			when key == num
-				number << key
-				puts number
-			else
-				puts "false"
+	my_hash.each do |keypair| 
+		if num == keypair[0]
+			counter += 1
 		end
 	end
+		if counter > 0
+			return true
+		else
+			return false
+		end
 end
 
- my_include?(1)
+ 
