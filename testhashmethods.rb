@@ -3,6 +3,6 @@ require_relative 'hashmethods.rb'
 
 class Testing < Minitest::Test
 	def test_a
-		assert_equal("true", my_include?(1))
+		assert_equal("true", my_include?("a"))
 	end
 end

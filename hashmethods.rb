@@ -4,11 +4,11 @@ def my_include?(num)
 	1 => "a",
 	2 => "b"
 }
-	my_hash.each{|key| key <=> num}
-	if key = num
+	my_hash.each{|key, value| puts key}
+	case num = key
 		puts "true"
-	else key != num
-		puts "false"
 	end
 
 end
+
+my_include?(1)
