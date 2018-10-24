@@ -1,9 +1,9 @@
-my_hash = {
+
+def my_include?(value)
+	my_hash = {
 	1 => "a",
 	2 => "b"
 }
-
-def my_include?(value)
 	my_hash.each {|key| key <=> value}
 	if value != key
 		return false
