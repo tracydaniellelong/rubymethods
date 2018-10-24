@@ -14,12 +14,7 @@
 # 		end
 # end
 
- def my_reject!(my_hash, operator, changed_key)
- 	
- 	# case oper
- 	# when oper == less
- 		
-
+def my_reject!(my_hash, operator, changed_key)
  	my_hash.each do |key, value|
  		if operator == ">"
  			if key > changed_key
@@ -28,5 +23,4 @@
  		end
  	end
 return my_hash
-
- end
+end

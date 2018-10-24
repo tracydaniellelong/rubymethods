@@ -23,7 +23,7 @@ class Testing < Minitest::Test
 	# 	assert_equal(true, my_include?(my_hash, "b"))
 	# 	assert_equal(false, my_include?(my_hash, "f"))
 	#  end
-	def test_reject
+	def test_reject_greater
 		my_hash ={
 			1 => "a",
 			2 => "b",
@@ -31,6 +31,16 @@ class Testing < Minitest::Test
 		}
 		operator = ">"
 		changed_key = 1
+		assert_equal({1 => "a"}, my_reject!(my_hash, operator, changed_key))
+	end
+	def test_reject_less
+		my_hash ={
+			1 => "a",
+			2 => "b",
+			3 => "c"
+		}
+		operator = "<"
+		changed_key = 2
 		assert_equal({1 => "a"}, my_reject!(my_hash, operator, changed_key))
 	end
 #my_hash.reject!{|key, value| key > 1}
