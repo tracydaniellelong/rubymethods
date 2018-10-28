@@ -7,6 +7,10 @@
 
 def my_scan(str, txt)
 	matches = []
-	matches << str[txt] 
+	str.each do |x|
+		if x == txt
+			matches << x
+		end
+	end
 	return matches
 end
