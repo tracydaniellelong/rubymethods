@@ -27,6 +27,6 @@ class Testing < Minitest::Test
 	def test_scan_for_numbers
 		str = "2737475876754746"
 		txt = "7"
-		assert_equal(["7", "7", "7", "7", "7"], my_scan(str, txt))
+		assert_equal(["7", "7", "7", "7", "7", "7"], my_scan(str, txt))
 	end
 end
