@@ -17,6 +17,11 @@ class Testing < Minitest::Test
 	def test_string_scan_for_h
 		str = "hello"
 		txt = "h"
-		assert_equal("h", my_scan(str, txt))
+		assert_equal(["h"], my_scan(str, txt))
+	end
+	def test_string_scan_for_l
+		str = "hello"
+		txt = "l"
+		assert_equal(["l", "l"], my_scan(str, txt))
 	end
 end
