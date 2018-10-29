@@ -8,16 +8,16 @@
 
 def my_map(ary, oper)
 	newary = []
+
 	ary.each do |x|
-		case oper
-		when "+"
-			newary << ary + x
-		when "-"
-			newary << ary - x
-		when "*"
-			newary << ary * x
-		when "/"
-			newary << ary / x
+		if oper == "+"
+			newary << x + x
+		elsif oper == "-"
+			newary << x - x
+		elsif oper == "*"
+			newary << x * x
+		else oper == "/"
+			newary << x / x
 		end
 	end
 end
