@@ -36,17 +36,20 @@ class Testing < Minitest::Test
 	def test_map_add
 		ary = [1, 2, 3, 4]
 		oper = "+"
-		assert_equal([2, 4, 6, 8], my_map(ary, oper, change))
+		change = 3
+		assert_equal([4, 5, 6, 7], my_map(ary, oper, change))
 	end
 	def test_map_add_string
 		ary = ["cat", "dog", "bird"]
 		oper = "+"
+		change = "s"
 		assert_equal(["cats", "dogs", "birds"], my_map(ary, oper, change))
 	end
 	def test_map_subtract
-		ary = [1, 2, 3, 4]
+		ary = [15, 25, 35, 45]
 		oper = "-"
-		assert_equal([0, 0, 0, 0], my_map(ary, oper, change))
+		change = 5
+		assert_equal([10, 20, 30, 40], my_map(ary, oper, change))
 	end
 
 end
