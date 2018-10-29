@@ -8,7 +8,6 @@
 
 def my_map(ary, oper)
 	newary = []
-
 	ary.each do |x|
 		if oper == "+"
 			newary << x + x
@@ -20,4 +19,5 @@ def my_map(ary, oper)
 			newary << x / x
 		end
 	end
+	return newary
 end
