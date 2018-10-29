@@ -1,12 +1,12 @@
 
 def my_sub!(str, oldtxt, newtxt)
-	my_string = str
 	new_string = ""
-	my_string.length do |item|
-		if item == oldtxt
+	my_string = str.split('')
+	my_string.each do |x|
+		if x == oldtxt
 			new_string << newtxt
 		else
-			new_string << item
+			new_string << x
 		end
 	end
 	return new_string

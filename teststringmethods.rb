@@ -47,9 +47,9 @@ class Testing < Minitest::Test
 	end
 	def test_sub_p_l_and_e
 		str = "Happy Halloween"
-		oldtxt = "p", "l", "e"
-		newtxt = "6", "!", "9"
-		assert_equal("", my_sub!(str, oldtxt, newtxt))
+		oldtxt = "p"
+		newtxt = "6"
+		assert_equal("Ha66y Halloween", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_word
 		str = "A spooky witch"
@@ -57,11 +57,11 @@ class Testing < Minitest::Test
 		newtxt = "ghost"
 		assert_equal("A spooky ghost", my_sub!(str, oldtxt, newtxt))
 	end
-	def test_sub_sentence
+	def test_sub_sentence_s_to_z
 		str = "Head, shoulders, knees, and toes."
-		oldtxt = "e", "s"
-		newtxt = "3", "z"
-		assert_equal("", my_sub!(str, oldtxt, newtxt))
+		oldtxt = "s"
+		newtxt = "z"
+		assert_equal("Head, zhoulderz, kneez, and toez.", my_sub!(str, oldtxt, newtxt))
 	end
 
 
