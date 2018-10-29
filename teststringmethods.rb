@@ -19,49 +19,49 @@ class Testing < Minitest::Test
 		str = "roses are red"
 		oldtxt = "red"
 		newtxt = "blue"
-		assert_equal("", my_sub(str, oldtxt, newtxt))
+		assert_equal("roses are blue", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_s_to_symbol
 		str = "wireless"
 		oldtxt = "s"
 		newtxt = "$"
-		assert_equal("", my_sub(str, oldtxt, newtxt))
+		assert_equal("wirele$$", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_t_to_7
 		str = "tracy"
 		oldtxt = "t"
 		newtxt = "7"
-		assert_equal("", my_sub(str, oldtxt, newtxt))
+		assert_equal("7racy", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_a_to_4
 		str = "hahahaha"
 		oldtxt = "a"
 		newtxt = "4"
-		assert_equal("", my_sub(str, oldtxt, newtxt))
+		assert_equal("h4h4h4h4", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_o_to_symbol
 		str = "BOOHOO"
-		oldtxt = "o"
+		oldtxt = "O"
 		newtxt = "@"
-		assert_equal("", my_sub(str, oldtxt, newtxt))
+		assert_equal("", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_p_l_and_e
 		str = "Happy Halloween"
 		oldtxt = "p", "l", "e"
 		newtxt = "6", "!", "9"
-		assert_equal("", my_sub(str, oldtxt, newtxt))
+		assert_equal("", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_word
 		str = "A spooky witch"
 		oldtxt = "witch"
 		newtxt = "ghost"
-		assert_equal("", my_sub(str, oldtxt, newtxt))
+		assert_equal("A spooky ghost", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_sentence
 		str = "Head, shoulders, knees, and toes."
 		oldtxt = "e", "s"
 		newtxt = "3", "z"
-		assert_equal("", my_sub(str, oldtxt, newtxt))
+		assert_equal("", my_sub!(str, oldtxt, newtxt))
 	end
 
 

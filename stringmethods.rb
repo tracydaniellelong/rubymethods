@@ -1,8 +1,15 @@
 
 def my_sub!(str, oldtxt, newtxt)
 	my_string = str
-	my_string[oldtxt] = newtxt
-	return my_string
+	new_string = ""
+	my_string.length do |item|
+		if item == oldtxt
+			new_string << newtxt
+		else
+			new_string << item
+		end
+	end
+	return new_string
 end
 
 def my_scan(str, txt)
