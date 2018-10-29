@@ -84,36 +84,36 @@ class Testing < Minitest::Test
 	def test_scan_for_letter_a
 		str = "a dog chasing a ball"
 		txt = "a"
-		assert_equal([""], my_scan(str, txt))
+		assert_equal(["a", "a", "a", "a"], my_scan(str, txt))
 	end
 	def test_scan_for_letter_s
 		str = "test, test, test, and more, test"
 		txt = "s"
-		assert_equal([""], my_scan(str, txt))
+		assert_equal(["s", "s", "s", "s"], my_scan(str, txt))
 	end
 	def test_scan_for_number_9
 		str = "28937492739"
 		txt = "9"
-		assert_equal([""], my_scan(str, txt))
+		assert_equal(["9", "9", "9"], my_scan(str, txt))
 	end
 	def test_scan_for_number_6
 		str = "3746226"
 		txt = "6"
-		assert_equal([""], my_scan(str, txt))
+		assert_equal(["6", "6"], my_scan(str, txt))
 	end
 	def test_scan_for_letter_e
 		str = "Free candy for Halloween"
 		txt = "e"
-		assert_equal([""], my_scan(str, txt))
+		assert_equal(["e", "e", "e", "e"], my_scan(str, txt))
 	end
 	def test_scan_for_letter_w
 		str = "withches and worlocks"
 		txt = "w"
-		assert_equal([""], my_scan(str, txt))
+		assert_equal(["w", "w"], my_scan(str, txt))
 	end
 	def test_scan_for_letter_Q
 		str = "the txt is not in this string"
 		txt = "Q"
-		assert_equal([""], my_scan(str, txt))
+		assert_equal([], my_scan(str, txt))
 	end
 end
