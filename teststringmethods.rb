@@ -13,13 +13,13 @@ class Testing < Minitest::Test
 		str = "123466789"
 		oldtxt = "6"
 		newtxt = "5"
-		assert_equal("123456789", my_sub!(str, oldtxt, newtxt))
+		assert_equal("123455789", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_red_to_blue
 		str = "roses are red"
-		oldtxt = "red"
-		newtxt = "blue"
-		assert_equal("roses are blue", my_sub!(str, oldtxt, newtxt))
+		oldtxt = "r"
+		newtxt = "2"
+		assert_equal("2oses a2e 2ed", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_s_to_symbol
 		str = "wireless"
@@ -43,7 +43,7 @@ class Testing < Minitest::Test
 		str = "BOOHOO"
 		oldtxt = "O"
 		newtxt = "@"
-		assert_equal("", my_sub!(str, oldtxt, newtxt))
+		assert_equal("B@@H@@", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_p_l_and_e
 		str = "Happy Halloween"
@@ -53,9 +53,9 @@ class Testing < Minitest::Test
 	end
 	def test_sub_word
 		str = "A spooky witch"
-		oldtxt = "witch"
-		newtxt = "ghost"
-		assert_equal("A spooky ghost", my_sub!(str, oldtxt, newtxt))
+		oldtxt = "y"
+		newtxt = "ee"
+		assert_equal("A spookee witch", my_sub!(str, oldtxt, newtxt))
 	end
 	def test_sub_sentence_s_to_z
 		str = "Head, shoulders, knees, and toes."
