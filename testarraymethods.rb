@@ -24,22 +24,29 @@ class Testing < Minitest::Test
 	def test_array_map_multiply
 		ary = [1, 2, 3, 4]
 		oper = "*"
-		assert_equal([1, 4, 9, 16], my_map(ary, oper))
+		change = 2
+		assert_equal([2, 4, 6, 8], my_map(ary, oper, change))
 	end
 	def test_map_divide
-		ary = [1, 2, 3, 4]
+		ary = [100, 200, 300, 400]
 		oper = "/"
-		assert_equal([1, 1, 1, 1], my_map(ary, oper))
+		change = 10
+		assert_equal([10, 20, 30, 40], my_map(ary, oper, change))
 	end
 	def test_map_add
 		ary = [1, 2, 3, 4]
 		oper = "+"
-		assert_equal([2, 4, 6, 8], my_map(ary, oper))
+		assert_equal([2, 4, 6, 8], my_map(ary, oper, change))
+	end
+	def test_map_add_string
+		ary = ["cat", "dog", "bird"]
+		oper = "+"
+		assert_equal(["cats", "dogs", "birds"], my_map(ary, oper, change))
 	end
 	def test_map_subtract
 		ary = [1, 2, 3, 4]
 		oper = "-"
-		assert_equal([0, 0, 0, 0], my_map(ary, oper))
+		assert_equal([0, 0, 0, 0], my_map(ary, oper, change))
 	end
 
 end
